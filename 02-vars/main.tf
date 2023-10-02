@@ -1,5 +1,5 @@
 variable "fruit" {
- name = "apple"
+ default = "apple"
 
 }
 

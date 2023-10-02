@@ -12,3 +12,7 @@ data "aws_route53_zone" "zone" {
   name         = "devopsa17.online"
 
 }
+
+variable "zone_id" {
+   default = "devopsa17.online"
+}

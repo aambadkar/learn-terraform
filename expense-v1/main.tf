@@ -20,7 +20,7 @@ resource "aws_route53_record" "frontend" {
 
 resource "null_resource" "frontend" {
 depends_on = [aws_route53_record.frontend]
-provisioner "local-exec"{
+provisioner "local-exec" {
 command = <<EOF
      cd /home/centos/infra-ansible
      git pull
@@ -51,7 +51,7 @@ resource "aws_route53_record" "backend" {
 
 resource "null_resource" "backend" {
 depends_on = [aws_route53_record.backend]
-provisioner "local-exec"{
+provisioner "local-exec" {
 command = <<EOF
      cd /home/centos/infra-ansible
      git pull
@@ -82,7 +82,7 @@ resource "aws_route53_record" "mysql" {
 
 resource "null_resource" "mysql" {
 depends_on = [aws_route53_record.mysql]
-provisioner "local-exec"{
+provisioner "local-exec" {
 command = <<EOF
      cd /home/centos/infra-ansible
      git pull

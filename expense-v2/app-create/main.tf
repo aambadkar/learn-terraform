@@ -10,7 +10,7 @@ resource "aws_instance" "instance" {
 }
 
 resource "aws_route53_record" "record" {
-  zone_id = data.aws_route53_zone.zone.zone_id
+  zone_id = local.zone_id
   name    = "${var.component}.${var.zone_id}"
   type    = "A"
   ttl     = 30

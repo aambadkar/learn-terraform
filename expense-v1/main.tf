@@ -25,7 +25,7 @@ depends_on = [aws_route53_record.frontend]
 cd /home/centos/infra-ansible
 git pull
 sleep 60
-ansible-playbook -i ${aws_instance.frontend.private_ip}, -e ansible_user=centos -e asnsible_password=DevOps321 main.yml -e role_name=frontend
+ansible-playbook -i ${aws_instance.frontend.private_ip}, -e ansible_user=centos -e ansible_password=DevOps321 main.yml -e role_name=frontend
 EOF
  }
 }
@@ -55,7 +55,7 @@ depends_on = [aws_route53_record.backend]
 cd /home/centos/infra-ansible
 git pull
 sleep 60
-ansible-playbook -i ${aws_instance.backend.private_ip}, -e ansible_user=centos -e asnsible_password=DevOps321 main.yml -e role_name=backend
+ansible-playbook -i ${aws_instance.backend.private_ip}, -e ansible_user=centos -e ansible_password=DevOps321 main.yml -e role_name=backend
 EOF
 
   }
@@ -86,7 +86,7 @@ depends_on = [aws_route53_record.mysql]
 cd /home/centos/infra-ansible
 git pull
 sleep 60
-ansible-playbook -i ${aws_instance.mysql.private_ip}, -e ansible_user=centos -e asnsible_password=DevOps321 main.yml -e role_name=mysql
+ansible-playbook -i ${aws_instance.mysql.private_ip}, -e ansible_user=centos -e ansible_password=DevOps321 main.yml -e role_name=mysql
 EOF
    }
 }
